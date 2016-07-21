@@ -8,7 +8,7 @@ RUN set -ex \
     && apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base \
     && pip install --upgrade pip cffi \
     && pip install ansible \
-    && apk --del build-dependencies \
+    && apk del build-dependencies \
     && rm -rf /var/cache/apk/* \
     && mkdir -p /etc/ansible \
     && echo 'localhost' > /etc/ansible/hosts
