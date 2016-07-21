@@ -14,7 +14,6 @@ RUN set -ex \
         "azure>=0.7.1" \
         "cs>=0.6.10" \
         "docker-py>=1.7.0" \
-        "libvirt-python" \
         "pyrax" \
         "python-consul" \
         "requests" \
