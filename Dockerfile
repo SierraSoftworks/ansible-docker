@@ -10,7 +10,8 @@ RUN set -ex \
     && pip install \
         "ansible" \
         "boto" \
-        "dopy>=0.3.5,<=0.3.5" \
+        "dopy" \
+        "six" \
         "azure>=0.7.1" \
         "cs>=0.6.10" \
         "docker-py>=1.7.0" \
