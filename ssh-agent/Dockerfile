@@ -4,7 +4,7 @@ MAINTAINER Benjamin Pannell <admin@sierrasoftworks.com>
 
 RUN set -ex \
     && apk --update add sudo \
-    && apk --update add python py-pip openssl ca-certificates \
+    && apk --update add python py-pip openssl ca-certificates openssh-client \
     && apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base linux-headers musl-dev \
     && pip install --upgrade pip cffi \
     && pip install \
@@ -15,7 +15,6 @@ RUN set -ex \
         "azure>=0.7.1" \
         "cs>=0.6.10" \
         "docker-py>=1.7.0" \
-        "openssh-client" \
         "pyrax" \
         "python-consul" \
         "requests" \
