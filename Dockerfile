@@ -4,7 +4,7 @@ MAINTAINER Benjamin Pannell <admin@sierrasoftworks.com>
 
 RUN set -ex \
     && apk --update add sudo \
-    && apk --update add python py-pip openssl ca-certificates \
+    && apk --update add python py-pip openssl ca-certificates sshpass \
     && apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base linux-headers musl-dev \
     && pip install --upgrade pip cffi \
     && pip install \
@@ -26,5 +26,6 @@ RUN set -ex \
 
 WORKDIR /ansible
 VOLUME /ansible
+ENV ANSIBLE_HOST_KEY_CHECKING=False
 
 CMD ["ansible", "--version"]

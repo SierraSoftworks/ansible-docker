@@ -32,6 +32,7 @@ WORKDIR /ansible
 VOLUME /ansible
 VOLUME /root/keys
 ENV SSH_KEY=/root/keys/id_rsa
+ENV ANSIBLE_HOST_KEY_CHECKING=False
 
 ENTRYPOINT entry.sh
 

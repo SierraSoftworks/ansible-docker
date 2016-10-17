@@ -15,5 +15,6 @@ RUN set -ex \
 
 WORKDIR /ansible
 VOLUME /ansible
+ENV ANSIBLE_HOST_KEY_CHECKING=False
 
 CMD ["ansible", "--version"]
